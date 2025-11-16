@@ -7,17 +7,17 @@ public class BinarySearch {
     }
 
     public static int search(int[] arr, int target, int start, int end) {
-        if(start > end) {
+        if (start > end) {
             return -1;
         }
 
-        int middle = ( start + end ) / 2;
+        int middle = (start + end) / 2;
 
-        if(target == arr[middle]) {
+        if (target == arr[middle]) {
             return middle;
         }
 
-        if(target > arr[middle]) {
+        if (target > arr[middle]) {
             return search(arr, target, middle + 1, end);
         }
 
