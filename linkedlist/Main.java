@@ -2,32 +2,34 @@ package linkedlist;
 
 public class Main {
     public static void main(String[] args) {
-//        SingleLinkedList list = new SingleLinkedList();
-//
-//        list.addLast(14);
-//        list.addLast(42);
-//        list.addLast(32);
-//        list.addLast(10);
-//        list.addLast(24);
-//
-//        list.add(17, 3);
-//        list.display();
-//
-//        list.delete(3);
-//        list.display();
-//
-//        list.add(56, 5);
-//        list.display();
-//
-//        System.out.println("---- New Reverse LL ----");
-//        list.reverseDisplay();
-//        System.out.println("---- Original LL ----");
-//        list.display();
-//
-//        list.reverseTwo();
-//        list.display();
-//
-//        System.out.println(list.size);
+        SingleLinkedList list = new SingleLinkedList();
+
+        list.addLast(14);
+        list.addLast(42);
+        list.addLast(32);
+        list.addLast(10);
+        list.addLast(24);
+
+        list.add(17, 3);
+        list.display();
+
+        list.delete(3);
+        list.display();
+
+        list.add(56, 5);
+        list.display();
+
+        System.out.println("---- New Reverse LL ----");
+        list.reverseDisplay();
+        System.out.println("---- Original LL ----");
+        list.display();
+
+        list.reverseTwo();
+        list.display();
+
+        System.out.println(list.size);
+
+        System.out.println("Double Linked List");
 
         DoubleLinkedList doubleList = new DoubleLinkedList();
 
