@@ -1,11 +1,11 @@
 package linkedlist;
 
-public class CustomLinkedList {
+public class SingleLinkedList {
     private Node head;
     private Node tail;
     public int size;
 
-    public CustomLinkedList () {
+    public SingleLinkedList() {
         this.size = 0;
     }
 
@@ -23,16 +23,6 @@ public class CustomLinkedList {
         }
     }
 
-    private Node get (int index) {
-        Node node = head;
-
-        for (int i = 0; i < index; i++) {
-            node = node.next;
-        }
-
-        return node;
-    }
-
     public void display() {
         Node temp = head;
 
@@ -43,6 +33,29 @@ public class CustomLinkedList {
 
         System.out.print("END");
         System.out.println();
+    }
+
+    public void reverseDisplay() {
+        Node temp = head;
+
+        SingleLinkedList reverse = new SingleLinkedList();
+
+        for (int i = 0; i < size; i++) {
+            reverse.addFirst(temp.value);
+            temp = temp.next;
+        }
+
+        reverse.display();
+    }
+
+    private Node get(int index) {
+        Node node = head;
+
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+
+        return node;
     }
 
     public void addFirst(int value) {
@@ -96,11 +109,10 @@ public class CustomLinkedList {
         }
 
         temp.next = new Node(value, temp.next);
-
         size++;
     }
 
-    public void deleteFirst () {
+    public void deleteFirst() {
         if (head == null) return;
 
         if (head == tail) {
@@ -112,7 +124,7 @@ public class CustomLinkedList {
         size--;
     }
 
-    public void deleteLast () {
+    public void deleteLast() {
         if (head == null) return;
 
         if (head == tail) {
@@ -133,7 +145,7 @@ public class CustomLinkedList {
         size--;
     }
 
-    public void delete (int index) {
+    public void delete(int index) {
         if (index < 0 || index >= size) return;
 
         if (index == 0) {
@@ -159,20 +171,7 @@ public class CustomLinkedList {
         size--;
     }
 
-    public void reverse () {
-        Node temp = head;
-
-        CustomLinkedList reverse = new CustomLinkedList();
-
-        for (int i = 0; i < size; i++) {
-            reverse.addFirst(temp.value);
-            temp = temp.next;
-        }
-
-        reverse.display();
-    }
-
-    public void originalReverse () {
+    public void reverse() {
         if (head == null || head.next == null) return;
 
         Node curr = head;
@@ -192,7 +191,7 @@ public class CustomLinkedList {
         }
     }
 
-    public void originalReverseTwo () {
+    public void reverseTwo() {
         if (head == null || head.next == null) return;
 
         Node temp = head;
