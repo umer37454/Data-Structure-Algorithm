@@ -31,6 +31,8 @@ public class Main {
 
         System.out.println("Double Linked List");
 
+        System.out.println();
+
         DoubleLinkedList doubleList = new DoubleLinkedList();
 
         doubleList.addFirst(12);
@@ -50,5 +52,27 @@ public class Main {
         doubleList.reverseDisplay();
 
         System.out.println("Current Size of DLL : " + doubleList.size);
+
+        System.out.println();
+
+        System.out.println("Circular Linked List");
+
+        System.out.println();
+
+        CircularLinkedList circularList = new CircularLinkedList();
+        circularList.addFirst(41);
+        circularList.addFirst(25);
+        circularList.addFirst(34);
+        circularList.addFirst(12);
+        circularList.addFirst(31);
+        circularList.addLast(53);
+        circularList.addLast(26);
+        circularList.add(18, 2);
+
+        circularList.deleteFirst();
+        circularList.deleteLast();
+        circularList.delete(3);
+
+        circularList.display();
     }
 }
