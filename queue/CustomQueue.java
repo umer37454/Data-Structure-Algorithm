@@ -1,30 +1,24 @@
-package stack;
+package queue;
 
-public class CustomStack {
+public class CustomQueue {
     private int[] data;
-    private final int SIZE = 10;
 
-    private int end = 0;
+    private int end;
 
-    public CustomStack() {
-        this.data = new int[SIZE];
-    }
-
-    public CustomStack(int size) {
+    public CustomQueue(int size) {
         this.data = new int[size];
+        this.end = 0;
     }
 
     public void display() {
-        for (int i : data) {
-            System.out.print(i + " ");
+        for (int i = 0; i < end; i++) {
+            System.out.print(data[i] + " ");
         }
-
-        System.out.println();
     }
 
     public void add(int value) {
         if (isFull()) {
-            System.out.println("Error: Cannot add. The stack is full!");
+            System.out.println("Error: Cannot add. The queue is full!");
             return;
         }
 
@@ -34,11 +28,14 @@ public class CustomStack {
 
     public void delete() {
         if (isEmpty()) {
-            System.out.println("Error: Cannot delete. The stack is empty!");
+            System.out.println("Error: Cannot delete. The queue is empty!");
             return;
         }
 
-        data[end - 1] = 0;
+        for (int i = 1; i < end; i++) {
+            data[i - 1] = data[i];
+        }
+
         end--;
     }
 
