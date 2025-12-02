@@ -1,12 +1,12 @@
 package stack;
 
 public class CustomStack {
-    private int[] data;
-    private final int SIZE = 10;
+    private final int[] data;
 
     private int end = 0;
 
     public CustomStack() {
+        int SIZE = 10;
         this.data = new int[SIZE];
     }
 

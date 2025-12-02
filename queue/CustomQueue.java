@@ -1,7 +1,7 @@
 package queue;
 
 public class CustomQueue {
-    private int[] data;
+    private final int[] data;
 
     private int end;
 
